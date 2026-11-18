@@ -1,0 +1,25 @@
+// Interface file: ICalculations.javapublic interface ICalculations {
+    double calculatePartOne();
+    double calculatePartTwo();
+    double calculateGrandTotal();
+}
+// Implementing class file: Calculations.javapublic class Calculations implements ICalculations {
+
+    private double basePrice;
+
+    public Calculations(double basePrice) {
+        this.basePrice = basePrice;
+    }
+
+    public double calculatePartOne() {
+        return basePrice * 0.10; // Replace with your required percentage
+    }
+
+    public double calculatePartTwo() {
+        return basePrice * 0.05; // Replace with your required percentage
+    }
+
+    public double calculateGrandTotal() {
+        return basePrice + calculatePartOne() + calculatePartTwo();
+    }
+}
